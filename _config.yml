@@ -1,0 +1,25 @@
+title:        linebreaks4imagettftext
+name:         linebreaks4imagettftext
+description:  linebreaks4imagettftext is a function to automatically insert line breaks into your text while using PHP's imagettftext function.
+author:       Andrew G. Johnson
+author_email: andrew@andrewgjohnson.com
+email:        andrew@andrewgjohnson.com
+url:          "http://linebreaks4imagettftext.org"
+includes_dir: .
+layouts_dir:  documentation/linebreaks4imagettftext.org/layouts
+exclude:      [
+               CHANGELOG.md,
+               CNAME,
+               CODE_OF_CONDUCT.md,
+               composer.json,
+               CONTRIBUTING.md,
+               documentation/README.md,
+               examples/*.php,
+               examples/*.ttf,
+               examples/*.txt,
+               ISSUE_TEMPLATE.md,
+               LICENSE,
+               PULL_REQUEST_TEMPLATE.md,
+               README.md,
+               source
+              ]

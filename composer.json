@@ -1,0 +1,30 @@
+{
+    "name": "andrewgjohnson/linebreaks4imagettftext",
+    "type": "library",
+    "description": "linebreaks4imagettftext is a function to automatically insert line breaks into your text while using PHP's imagettftext function",
+    "keywords": [
+        "gd",
+        "graphics",
+        "image",
+        "images"
+    ],
+    "homepage": "http://linebreaks4imagettftext.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew G Johnson",
+            "email": "andrew@andrewgjohnson.com",
+            "homepage": "http://www.andrewgjohnson.com/",
+            "role": "Project Lead"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0",
+        "ext-gd": "*"
+    },
+    "autoload": {
+        "files": [
+            "source/linebreaks4imagettftext.php"
+        ]
+    }
+}
