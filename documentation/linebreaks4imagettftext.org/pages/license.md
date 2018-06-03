@@ -1,0 +1,15 @@
+---
+layout:    layout
+title:     linebreaks4imagettftext&#58; License
+permalink: /license/
+nav:       4
+---
+
+# License
+
+{% capture content %}{% include LICENSE %}{% endcapture %}
+{{ content | markdownify }}
+
+---
+
+You can read more about [**the MIT License**](https://opensource.org/licenses/mit/) at [https://opensource.org/licenses/mit/](https://opensource.org/licenses/mit/).
