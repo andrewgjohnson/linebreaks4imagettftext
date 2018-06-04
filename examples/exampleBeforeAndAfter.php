@@ -41,7 +41,7 @@ if (file_exists('../source/linebreaks4imagettftext.php')) {
 $fontPath     = rtrim(dirname(__FILE__), '/\\') . '/arial.ttf';
 $fontSize     = 10;
 $fontAngle    = 0;
-$text         = file_get_contents('aTaleOfTwoCities.txt');
+$text         = file_get_contents(rtrim(dirname(__FILE__), '/\\') . '/aTaleOfTwoCities.txt');
 $textPadding  = 10;
 $imageSize    = 300;
 $imagePadding = 25;
