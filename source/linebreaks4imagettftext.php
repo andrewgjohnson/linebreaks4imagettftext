@@ -33,42 +33,42 @@ namespace andrewgjohnson;
 
 if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
     /**
-     * linebreaks4imagettftext is a function to automatically insert line breaks into
+     * Linebreaks4imagettftext is a function to automatically insert line breaks into
      * your text while using PHP's imagettftext function
      *
-     * @param float    $size               The font size. Depending on your version of
-     *    GD, this should be specified as the pixel size (GD1) or point size (GD2).
-     * @param float    $angle              The angle in degrees, with 0 degrees being
-     *    left-to-right reading text. Higher values represent a counter-clockwise
-     *    rotation. For example, a value of 90 would result in bottom-to-top reading
-     *    text.
-     * @param string   $fontfile           The path to the TrueType font you wish to use.
-     *    <br><br>Depending on which version of the GD library PHP is using, when
-     *    fontfile does not begin with a leading / then .ttf will be appended to the
-     *    filename and the library will attempt to search for that filename along a
-     *    library-defined font path.<br><br>When using versions of the GD library
-     *    lower than 2.0.18, a space character, rather than a semicolon, was used as
-     *    the 'path separator' for different font files. Unintentional use of this
-     *    feature will result in the warning message: Warning: Could not find/open
-     *    font. For these affected versions, the only solution is moving the font to
-     *    a path which does not contain spaces.<br><br>In many cases where a font
-     *    resides in the same directory as the script using it the following trick
-     *    will alleviate any include problems.
-     * @param string   $text               The text string in UTF-8 encoding. May include
-     *    decimal numeric character references (of the form: &amp;#8364;) to access
-     *    characters in a font beyond position 127. The hexadecimal format (like
-     *    &amp;#xA9;) is supported. Strings in UTF-8 encoding can be passed directly.
-     *    Named entities, such as &amp;copy;, are not supported. Consider using
-     *    html_entity_decode to decode these named entities into UTF-8 strings. If a
-     *    character is used in the string which is not supported by the font, a hollow
-     *    rectangle will replace the character.
-     * @param int      $maximumWidth       The maximum width (in pixels) a line should be
-     *    before adding a line break.
-     * @param int      $lineBreakCharacter The character(s) to use when adding a line
-     *    break (default is PHP_EOL).
+     * @param float  $size               <p>The font size. Depending on your version
+     *    of GD, this should be specified as the pixel size (GD1) or point size
+     *    (GD2).</p>
+     * @param float  $angle              <p>The angle in degrees, with 0 degrees
+     *    being left-to-right reading text. Higher values represent a counter-
+     *    clockwise rotation. For example, a value of 90 would result in bottom-to-
+     *    top reading text.</p>
+     * @param string $fontfile           <p>The path to the TrueType font you wish
+     *    to use.</p><p>Depending on which version of the GD library PHP is using,
+     *    when fontfile does not begin with a leading / then .ttf will be appended
+     *    to the filename and the library will attempt to search for that filename
+     *    along a library-defined font path.</p><p>When using versions of the GD
+     *    library lower than 2.0.18, a space character, rather than a semicolon, was
+     *    used as the 'path separator' for different font files. Unintentional use
+     *    of this feature will result in the warning message: Warning: Could not
+     *    find/open font. For these affected versions, the only solution is moving
+     *    the font to a path which does not contain spaces.</p>
+     * @param string $text               <p>The text string in UTF-8 encoding.</p>
+     *    <p>May include decimal numeric character references (of the form:
+     *    &amp;#8364;) to access characters in a font beyond position 127. The
+     *    hexadecimal format (like &amp;#xA9;) is supported.Strings in UTF-8
+     *    encoding can be passed directly.</p><p>Named entities, such as &amp;copy;,
+     *    are not supported. Consider using html_entity_decode to decode these named
+     *    entities into UTF-8 strings.</p><p>If a character is used in the string
+     *    which is not supported by the font, a hollow rectangle will replace the
+     *    character.</p>
+     * @param int    $maximumWidth       <p>The maximum width (in pixels) a line
+     *    should be before adding a line break.</p>
+     * @param int    $lineBreakCharacter <p>The character(s) to use when adding a
+     *    line break (default is PHP_EOL).</p>
      *
-     * @return Returns a string that is nearly identical to $text; the only difference is
-     * the newly added line breaks.
+     * @return Returns a string that is nearly identical to $text; the only
+     * difference is the newly added line breaks.
      */
     function linebreaks4imagettftext(
         $size,
@@ -85,8 +85,8 @@ if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
         $textWithLineBreaks = '';
         $currentLine = '';
         foreach ($words as $position => $word) {
-            // place the first word into $currentLine without any processing (we always
-            // want to include the first word on the first line--obviously)
+            // place the first word into $currentLine without any processing (we
+            // always want to include the first word on the first line--obviously)
             if ($position === 0) {
                 $currentLine = $word;
             } else {
@@ -101,19 +101,21 @@ if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
                 $textRight = max($textDimensions[2], $textDimensions[4]);
                 $textWidth = $textRight - $textLeft;
                 if ($textWidth > $maximumWidth) {
-                    // the text is too wide with the added word so we add a line break
-                    // then start a new line with only the added word
+                    // the text is too wide with the added word so we add a line
+                    // break then start a new line with only the added word
                     $textWithLineBreaks .= $currentLine;
                     $textWithLineBreaks .= $lineBreakCharacter;
 
                     $currentLine = $word;
                 } else {
-                    // we have space on the current line for the added word so we add it
+                    // we have space on the current line for the added word so we
+                    // add it
                     $currentLine .= ' ' . $word;
                 }
             }
         }
-        // we still have the current line unadded to $textWithLineBreaks so we add it now
+        // we still have the current line unadded to $textWithLineBreaks so we add
+        // it now
         $textWithLineBreaks .= $currentLine;
 
         // return $text with line breaks added

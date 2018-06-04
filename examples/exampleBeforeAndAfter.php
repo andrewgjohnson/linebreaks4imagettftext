@@ -37,25 +37,25 @@ if (file_exists('../source/linebreaks4imagettftext.php')) {
 }
 
 // set the parameters for our images
-
-$fontPath     = rtrim(dirname(__FILE__), '/\\') . '/arial.ttf';
+$fontPath     = __DIR__ . '/arial.ttf';
 $fontSize     = 10;
 $fontAngle    = 0;
-$text         = file_get_contents(rtrim(dirname(__FILE__), '/\\') . '/aTaleOfTwoCities.txt');
+$text         = file_get_contents(__DIR__ . '/aTaleOfTwoCities.txt');
 $textPadding  = 10;
 $imageSize    = 300;
 $imagePadding = 25;
 
-// generate the "before" image
+// generate the before image
+$beforeIm = imagecreatetruecolor($imageSize, $imageSize);
 
-$before = imagecreatetruecolor($imageSize, $imageSize);
+// set the before image's background color
+$lightRed = imagecolorallocate($beforeIm, 0xFF, 0xDD, 0xDD);
+imagefill($beforeIm, 0, 0, $lightRed);
 
-$lightRed = imagecolorallocate($before, 0xFF, 0xDD, 0xDD);
-imagefill($before, 0, 0, $lightRed);
-
-$darkRed = imagecolorallocate($before, 0x66, 0x00, 0x00);
+// add the before image's text
+$darkRed = imagecolorallocate($beforeIm, 0x66, 0x00, 0x00);
 imagettftext(
-    $before,
+    $beforeIm,
     $fontSize,
     $fontAngle,
     $textPadding,
@@ -65,16 +65,17 @@ imagettftext(
     $text
 );
 
-// generate the "after" image
+// generate the after image
+$afterIm = imagecreatetruecolor($imageSize, $imageSize);
 
-$after = imagecreatetruecolor($imageSize, $imageSize);
+// set the after image's background color
+$lightGreen = imagecolorallocate($afterIm, 0xDD, 0xFF, 0xDD);
+imagefill($afterIm, 0, 0, $lightGreen);
 
-$lightGreen = imagecolorallocate($after, 0xDD, 0xFF, 0xDD);
-imagefill($after, 0, 0, $lightGreen);
-
-$darkGreen = imagecolorallocate($after, 0x00, 0x66, 0x00);
+// add the after image's text
+$darkGreen = imagecolorallocate($afterIm, 0x00, 0x66, 0x00);
 imagettftext(
-    $after,
+    $afterIm,
     $fontSize,
     $fontAngle,
     $textPadding,
@@ -86,49 +87,53 @@ imagettftext(
         $fontAngle,
         $fontPath,
         $text,
-        imagesx($after) - $textPadding - $textPadding
+        imagesx($afterIm) - $textPadding - $textPadding
     )
 );
 
-// combine them into a single image
-
-$both = imagecreatetruecolor(
+// generate a single larger image to house both the before & after images
+$combinedIm = imagecreatetruecolor(
     $imagePadding + $imageSize + $imagePadding + $imageSize + $imagePadding,
     $imagePadding + $imageSize + $imagePadding
 );
 
-$darkBlue = imagecolorallocate($after, 0x00, 0x00, 0x66);
-imagefill($both, 0, 0, $darkBlue);
+// set the combined image's background color
+$darkBlue = imagecolorallocate($afterIm, 0x00, 0x00, 0x66);
+imagefill($combinedIm, 0, 0, $darkBlue);
 
+// add the before image on the left
 imagecopyresampled(
-    $both,
-    $before,
+    $combinedIm,
+    $beforeIm,
     $imagePadding,
     $imagePadding,
     0,
     0,
-    imagesx($before),
-    imagesy($before),
-    imagesx($before),
-    imagesy($before)
+    imagesx($beforeIm),
+    imagesy($beforeIm),
+    imagesx($beforeIm),
+    imagesy($beforeIm)
 );
+
+// add the after image on the right
 imagecopyresampled(
-    $both,
-    $after,
+    $combinedIm,
+    $afterIm,
     $imagePadding + $imageSize + $imagePadding,
     $imagePadding,
     0,
     0,
-    imagesx($after),
-    imagesy($after),
-    imagesx($after),
-    imagesy($after)
+    imagesx($afterIm),
+    imagesy($afterIm),
+    imagesx($afterIm),
+    imagesy($afterIm)
 );
 
-// display our image and destroy the GD resources
-
+// display our combined image
 header('Content-Type: image/png');
-imagepng($both);
-imagedestroy($before);
-imagedestroy($after);
-imagedestroy($both);
+imagepng($combinedIm);
+
+// destroy the GD resources
+imagedestroy($beforeIm);
+imagedestroy($afterIm);
+imagedestroy($combinedIm);
