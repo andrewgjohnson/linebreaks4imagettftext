@@ -46,7 +46,7 @@ To use without Composer add an [include](http://php.net/manual/function.include.
     // This will work and you will not have to worry about text overflowing
     imagettftext($im, 20, 0, 0, 0, $color, $font, $stringWithLineBreaks);
 
-There are [other examples](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/examples) included in the GitHub repository and on [linebreaks4imagettftext.org](http://linebreaks4imagettftext.org/examples/).
+There are [other examples](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/examples) included in the GitHub repository and on [linebreaks4imagettftext.org](https://linebreaks4imagettftext.org/examples/).
 
 ## Help Requests
 
