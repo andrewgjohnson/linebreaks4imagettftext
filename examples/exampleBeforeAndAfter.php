@@ -127,7 +127,7 @@ imagecopyresampled(
 
 // display our image and destroy the GD resources
 
-header('content-type:image/png');
+header('Content-Type: image/png');
 imagepng($both);
 imagedestroy($before);
 imagedestroy($after);
