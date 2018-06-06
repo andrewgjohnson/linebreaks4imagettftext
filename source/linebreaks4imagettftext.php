@@ -67,7 +67,7 @@ if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
      * @param int    $lineBreakCharacter <p>The character(s) to use when adding a
      *    line break (default is PHP_EOL).</p>
      *
-     * @return Returns a string that is nearly identical to $text; the only
+     * @return string Returns a string that is nearly identical to $text; the only
      * difference is the newly added line breaks.
      */
     function linebreaks4imagettftext(
