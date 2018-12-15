@@ -4,6 +4,11 @@ All notable changes to the [linebreaks4imagettftext project](https://github.com/
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.0.2 (December 15, 2018)
+ * Fixed bug that would sometimes exclude a space when doing calculations
+ * Added return type for PHPDoc
+ * Cosmetic updates to https://linebreaks4imagettftext.org/
+
 ## v1.0.1 (June 4, 2018)
  * Enabled HTTPS on https://linebreaks4imagettftext.org/
  * Switched YUI reset CSS from Yahoo hosted to inline
