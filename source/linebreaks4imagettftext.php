@@ -90,12 +90,12 @@ if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
             if ($position === 0) {
                 $currentLine = $word;
             } else {
-                // calculate the text's size if we were to add another word
+                // calculate the text's size if we were to add the word
                 $textDimensions = imagettfbbox(
                     $size,
                     $angle,
                     $fontfile,
-                    $currentLine . $word
+                    $currentLine . ' ' . $word
                 );
                 $textLeft = min($textDimensions[0], $textDimensions[6]);
                 $textRight = max($textDimensions[2], $textDimensions[4]);
@@ -109,13 +109,13 @@ if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
                     $currentLine = $word;
                 } else {
                     // we have space on the current line for the added word so we
-                    // add it
-                    $currentLine .= ' ' . $word;
+                    // add a space then the word
+                    $currentLine .= ' ';
+                    $currentLine .= $word;
                 }
             }
         }
-        // we still have the current line unadded to $textWithLineBreaks so we add
-        // it now
+        // the current line is still unadded to $textWithLineBreaks so we add it
         $textWithLineBreaks .= $currentLine;
 
         // return $text with line breaks added
