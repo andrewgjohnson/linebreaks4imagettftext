@@ -67,7 +67,7 @@ This project was started by [Andrew G. Johnson (@andrewgjohnson)](https://github
 Full list of contributors:
  * [Andrew G. Johnson (@andrewgjohnson)](https://github.com/andrewgjohnson)
 
-Our [issue template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/ISSUE_TEMPLATE.md) & [pull request template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/PULL_REQUEST_TEMPLATE.md) come via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project.
+Our [issue template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/ISSUE_TEMPLATE.md) & [pull request template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/PULL_REQUEST_TEMPLATE.md) come via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [mountains photo](https://unsplash.com/photos/qJvpykJ5SKs) comes via [Gabriel Garcia Marengo](https://unsplash.com/@gabrielgm).
 
 ## Changelog
 
