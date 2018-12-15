@@ -7,6 +7,8 @@
 [![Packagist Downloads](https://img.shields.io/packagist/dt/andrewgjohnson/linebreaks4imagettftext.png)](https://packagist.org/packages/andrewgjohnson/linebreaks4imagettftext/stats)
 [![Issues](https://img.shields.io/github/issues/andrewgjohnson/linebreaks4imagettftext.png)](https://github.com/andrewgjohnson/linebreaks4imagettftext/issues)
 
+<p align="center"><a href="https://linebreaks4imagettftext.org/" title=""><img src="https://linebreaks4imagettftext.org/documentation/linebreaks4imagettftext.org/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
+
 ## Description
 
 **linebreaks4imagettftext** is a function to automatically insert line breaks into your text while using PHP's imagettftext function.
