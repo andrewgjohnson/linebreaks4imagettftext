@@ -2,11 +2,10 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-0366d6.png?colorB=0366d6&style=flat-square)](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/LICENSE)
 [![Current Release](https://img.shields.io/github/release/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github)](https://github.com/andrewgjohnson/linebreaks4imagettftext/releases)
-[![GitHub Stars](https://img.shields.io/github/stars/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github)](https://github.com/andrewgjohnson/linebreaks4imagettftext/stargazers)
 [![Contributors](https://img.shields.io/github/contributors/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github)](https://github.com/andrewgjohnson/linebreaks4imagettftext/graphs/contributors)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=packagist)](https://packagist.org/packages/andrewgjohnson/linebreaks4imagettftext/stats)
 [![Issues](https://img.shields.io/github/issues/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github)](https://github.com/andrewgjohnson/linebreaks4imagettftext/issues)
-[![Patreon](https://img.shields.io/endpoint.png?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dagjopensource%26type%3Dpatrons&colorB=0366d6&style=flat-square&logoColor=white&logo=patreon)](https://patreon.com/agjopensource)
+[![Patreon](https://linebreaks4imagettftext.agjgd.org/documentation/linebreaks4imagettftext.agjgd.org/images/patreon-badge.png)](https://patreon.com/agjopensource)
 
 <p align="center"><a href="https://linebreaks4imagettftext.agjgd.org/" title=""><img src="https://linebreaks4imagettftext.agjgd.org/documentation/linebreaks4imagettftext.agjgd.org/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
 
@@ -16,7 +15,7 @@
 
 [![Patreon - Become a Patron](https://raster.shields.io/badge/Patreon%20-become%20a%20Patron-FD334A.png?style=for-the-badge&logo=patreon&logoColor=FD334A)](https://patreon.com/agjopensource)
 
-**linebreaks4imagettftext** is an [agjgd.org](https://agjgd.org) project.
+**linebreaks4imagettftext** is an [agjgd](https://agjgd.org) project.
 
 ## Usage
 
