@@ -11,7 +11,7 @@
 
 ## Description
 
-**linebreaks4imagettftext** is a function to automatically insert line breaks into your text while using PHP's imagettftext function.
+**linebreaks4imagettftext** is a function to automatically insert line breaks into your text while using PHP’s imagettftext() function.
 
 [![Patreon - Become a Patron](https://raster.shields.io/badge/Patreon%20-become%20a%20Patron-FD334A.png?style=for-the-badge&logo=patreon&logoColor=FD334A)](https://patreon.com/agjopensource)
 
@@ -41,16 +41,15 @@ To use without Composer add an [include](http://php.net/manual/function.include.
 
 ## Example
 
-    // You can use \andrewgjohnson\linebreaks4imagettftext() to add line breaks ("\n") to long strings to help format text when using imagettftext()
-    $string = 'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way--in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.';
-    $stringWithLineBreaks = \andrewgjohnson\linebreaks4imagettftext(20, 0, $font, $string, 200);
-    echo $stringWithLineBreaks; //"It was the best of times, it was the\nworst of times, it was the age of\nwisdom, it was the age of\nfoolishness, it was the epoch of\nbelief, it was the epoch of\nincredulity, it was the season of\nLight, it was the season of\nDarkness, it was the spring of\nhope, it was the winter of despair,\nwe had everything before us, we\nhad nothing before us, we were all\ngoing direct to Heaven, we were all\ngoing direct the other way--in short,\nthe period was so far like the\npresent period, that some of its\nnoisiest authorities insisted on its\nbeing received, for good or for evil,\nin the superlative degree of\ncomparison only."
+    // You can use linebreaks4imagettftext() to add line breaks ("\n") to long strings to help format text when using imagettftext()
+    $string = 'This is a long sentence that could not fit on a single line.';
+    $stringWithLineBreaks = \AndrewGJohnson\AgjGd\linebreaks4imagettftext(20, 0, $font, $string, imagesx($im) * 0.8);
 
-    // This will work but there will be no line breaks so your text will likely overflow horizontally
-    imagettftext($im, 20, 0, 0, 0, $color, $font, $string);
+    // This will work but there will are no line breaks so your text will likely overflow horizontally
+    imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $string);
 
-    // This will work and you will not have to worry about text overflowing
-    imagettftext($im, 20, 0, 0, 0, $color, $font, $stringWithLineBreaks);
+    // This will work and you will not have to worry about text overflowing regardless of string length
+    imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $stringWithLineBreaks);
 
 There are [other examples](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/examples) included in the GitHub repository and on [linebreaks4imagettftext.agjgd.org](https://linebreaks4imagettftext.agjgd.org/examples/).
 
@@ -58,11 +57,11 @@ There are [other examples](https://github.com/andrewgjohnson/linebreaks4imagettf
 
 Please post any questions in the [discussions area](https://github.com/andrewgjohnson/linebreaks4imagettftext/discussions) on GitHub if you need help.
 
-If you discover a bug please [enter an issue](https://github.com/andrewgjohnson/linebreaks4imagettftext/issues/new) on GitHub. When submitting an issue please use our [issue template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/ISSUE_TEMPLATE.md).
+If you discover a bug please [enter an issue](https://github.com/andrewgjohnson/linebreaks4imagettftext/issues/new) on GitHub. When submitting an issue please use our [issue template](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/.github/ISSUE_TEMPLATE).
 
 ## Contributing
 
-Please read our [contributing guidelines](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/CONTRIBUTING.md) if you want to contribute.
+Please read our [contributing guidelines](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/CONTRIBUTING.md) if you want to contribute.
 
 You can contribute financially by becoming a [patron](https://patreon.com/agjopensource) at [patreon.com/agjopensource](https://patreon.com/agjopensource) to support linebreaks4imagettftext and [other agjgd.org projects](https://agjgd.org/projects/).
 
@@ -75,7 +74,7 @@ This project was started by [Andrew G. Johnson (@andrewgjohnson)](https://github
 Full list of contributors:
  * [Andrew G. Johnson (@andrewgjohnson)](https://github.com/andrewgjohnson)
 
-Our [security policies and procedures](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/SECURITY.md) project. Our [issue templates](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/.github/ISSUE_TEMPLATE) comes via the [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [mountains photo](https://unsplash.com/photos/qJvpykJ5SKs) comes via [Gabriel Garcia Marengo](https://unsplash.com/@gabrielgm).
+Our [security policies and procedures](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/.github/SECURITY.md) project. Our [issue templates](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/.github/ISSUE_TEMPLATE) comes via the [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [mountains photo](https://unsplash.com/photos/qJvpykJ5SKs) comes via [Gabriel Garcia Marengo](https://unsplash.com/@gabrielgm).
 
 ## Changelog
 

@@ -7,7 +7,7 @@ nav:       2
 
 # Source
 
-[**linebreaks4imagettftext.php**](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/source/linebreaks4imagettftext.php)
+[**linebreaks4imagettftext.php**](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php)
 
-{% capture source %}{% include source/linebreaks4imagettftext.php %}{% endcapture %}
+{% capture source %}{% include source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php %}{% endcapture %}
 <pre><code>{{ source | replace: '<', '&lt;' | replace: '>', '&gt;' }}</code></pre>
