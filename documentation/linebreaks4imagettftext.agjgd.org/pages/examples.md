@@ -7,4 +7,5 @@ nav:       3
 
 # Examples
 
- * [Example: **Before and After**](/examples/before-and-after/)
+ * [Example One: **Before and After**](/examples/before-and-after/)
+ * [Example Two: **Using the Parameters**](/examples/using-the-parameters/)

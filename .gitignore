@@ -8,6 +8,8 @@ ehthumbs.db
 Thumbs.db
 .svn/
 .svn/*
+.settings/
+.settings/*
 .buildpath
 .project
 _site
