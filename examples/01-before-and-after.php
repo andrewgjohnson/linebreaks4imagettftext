@@ -131,6 +131,6 @@ header('Content-Type: image/png');
 imagepng($combinedIm);
 
 // Destroy the GD resources
-imagedestroy($beforeIm);
-imagedestroy($afterIm);
-imagedestroy($combinedIm);
+version_compare(PHP_VERSION, '8.0.0', '<') && imagedestroy($beforeIm);
+version_compare(PHP_VERSION, '8.0.0', '<') && imagedestroy($afterIm);
+version_compare(PHP_VERSION, '8.0.0', '<') && imagedestroy($combinedIm);
