@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Linebreaks4imagettftext v1.1.0
+ * Linebreaks4imagettftext v1.1.1
  *
  * Copyright (c) 2018-2026 Andrew G. Johnson <andrew@andrewgjohnson.com>
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
