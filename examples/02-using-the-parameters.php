@@ -33,14 +33,14 @@ if (file_exists('../source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php')) {
 }
 
 // Set the parameters for our image
-$width          = 300;
-$height         = 650;
+$width          = 325;
+$height         = 700;
 $imagePadding   = 20;
 $fontSize       = 10;
 $fontAngle      = 0;
-$fontPath       = dirname(__FILE__) . '/arial.ttf';
-$hyphenatedWord = 'Once-in-a-lifetime-opportunity';
-$longWord       = 'Pneumonoultramicroscopicsilicovolcanoconiosis';
+$fontPath       = dirname(__FILE__) . '/NotoSans-Regular.ttf';
+$hyphenatedWord = 'Jack-of-all-trades';
+$longWord       = 'The longest English language word is “Pneumonoultramicroscopicsilicovolcanoconiosis.”';
 $commonPhrase   = 'Hello world!';
 
 // Create our image
@@ -63,14 +63,14 @@ foreach (
         ),
         array(
             'color'                   => imagecolorallocate($im, 0x00, 0x00, 0xFF), // Blue
-            'string'                  => '(false, false, false)' . str_repeat(' ' . $hyphenatedWord, 5),
+            'string'                  => '(false, false, false)' . str_repeat(' ' . $hyphenatedWord, 7),
             'attemptToBreakOnHyphens' => false,
             'forceBreakOnSingleWords' => false,
             'preventWidows'           => false
         ),
         array(
             'color'                   => imagecolorallocate($im, 0x00, 0x99, 0x00), // Green
-            'string'                  => '(true, false, false)' . str_repeat(' ' . $hyphenatedWord, 5),
+            'string'                  => '(true, false, false)' . str_repeat(' ' . $hyphenatedWord, 7),
             'attemptToBreakOnHyphens' => true,
             'forceBreakOnSingleWords' => false,
             'preventWidows'           => false

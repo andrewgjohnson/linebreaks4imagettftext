@@ -17,6 +17,20 @@
 
 **linebreaks4imagettftext** is an [agjgd](https://agjgd.org) project.
 
+## Example
+
+    // You can use linebreaks4imagettftext() to add line breaks ("\n") to long strings to help format text when using imagettftext()
+    $string = 'This is a long sentence that could not fit on a single line.';
+    $stringWithLineBreaks = \AndrewGJohnson\AgjGd\linebreaks4imagettftext(20, 0, $font, $string, imagesx($im) * 0.8);
+
+    // This will work but there will be no line breaks so your text will likely overflow horizontally
+    imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $string);
+
+    // This will work and you will not have to worry about text overflowing regardless of string length
+    imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $stringWithLineBreaks);
+
+There are [other examples](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/examples) included in the GitHub repository and on [linebreaks4imagettftext.agjgd.org](https://linebreaks4imagettftext.agjgd.org/examples/).
+
 ## Usage
 
 ### With Composer
@@ -35,23 +49,9 @@ or add this to the `require` section of your composer.json file:
 
 ### Without Composer
 
-To use without Composer add an [include](http://php.net/manual/function.include.php) to the [`linebreaks4imagettftext.php` source file](https://raw.githubusercontent.com/andrewgjohnson/linebreaks4imagettftext/master/source/linebreaks4imagettftext.php).
+To use without Composer add an [include](http://php.net/manual/function.include.php) to the [`linebreaks4imagettftext.php` source file](https://raw.githubusercontent.com/andrewgjohnson/linebreaks4imagettftext/master/source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php).
 
-    include_once 'source/linebreaks4imagettftext.php';
-
-## Example
-
-    // You can use linebreaks4imagettftext() to add line breaks ("\n") to long strings to help format text when using imagettftext()
-    $string = 'This is a long sentence that could not fit on a single line.';
-    $stringWithLineBreaks = \AndrewGJohnson\AgjGd\linebreaks4imagettftext(20, 0, $font, $string, imagesx($im) * 0.8);
-
-    // This will work but there will are no line breaks so your text will likely overflow horizontally
-    imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $string);
-
-    // This will work and you will not have to worry about text overflowing regardless of string length
-    imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $stringWithLineBreaks);
-
-There are [other examples](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/examples) included in the GitHub repository and on [linebreaks4imagettftext.agjgd.org](https://linebreaks4imagettftext.agjgd.org/examples/).
+    include_once 'source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php';
 
 ## Help Requests
 

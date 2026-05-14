@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Linebreaks4imagettftext v1.1.1
+ * Linebreaks4imagettftext v1.1.2
  *
  * Copyright (c) 2018-2026 Andrew G. Johnson <andrew@andrewgjohnson.com>
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
@@ -40,7 +40,7 @@ if (!function_exists('AndrewGJohnson\\AgjGd\\linebreaks4imagettftext')) {
      * $string = 'This is a long sentence that could not fit on a single line.';
      * $stringWithLineBreaks = \AndrewGJohnson\AgjGd\linebreaks4imagettftext(20, 0, $font, $string, imagesx($im) * 0.8);
      *
-     * // This will work but there will are no line breaks so your text will likely overflow horizontally
+     * // This will work but there will be no line breaks so your text will likely overflow horizontally
      * imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $string);
      *
      * // This will work and you will not have to worry about text overflowing regardless of string length
@@ -112,7 +112,7 @@ if (!function_exists('AndrewGJohnson\\AgjGd\\linebreaks4imagettftext')) {
         // Define the _linebreaks4imagettftext_ttfWidth function for later use
         if (!function_exists('AndrewGJohnson\\AgjGd\\_linebreaks4imagettftext_ttfWidth')) {
             /**
-             * Calculte the width in pixels of a string rendered by imagettftext().
+             * Calculate the width in pixels of a string rendered by imagettftext().
              *
              * @param float  $size         The font size in points.
              * @param float  $angle        The angle in degrees, with 0 degrees being left-to-right reading text. Higher
