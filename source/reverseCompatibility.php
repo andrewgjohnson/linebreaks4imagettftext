@@ -29,7 +29,7 @@ namespace andrewgjohnson;
 
 if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
     /**
-     * This function exists to support reverse compabitility. Please use \AndrewGJohnson\AgjGd\linebreaks4imagettftext()
+     * This function exists to support reverse compatibility. Please use \AndrewGJohnson\AgjGd\linebreaks4imagettftext()
      * rather than \andrewgjohnson\linebreaks4imagettftext().
      *
      * Examples:
@@ -40,7 +40,7 @@ if (!function_exists('andrewgjohnson\\linebreaks4imagettftext')) {
      * $string = 'This is a long sentence that could not fit on a single line.';
      * $stringWithLineBreaks = \AndrewGJohnson\AgjGd\linebreaks4imagettftext(20, 0, $font, $string, imagesx($im) * 0.8);
      *
-     * // This will work but there will are no line breaks so your text will likely overflow horizontally
+     * // This will work but there will be no line breaks so your text will likely overflow horizontally
      * imagettftext($im, 20, 0, imagesx($im) * 0.1, 0, $color, $font, $string);
      *
      * // This will work and you will not have to worry about text overflowing regardless of string length

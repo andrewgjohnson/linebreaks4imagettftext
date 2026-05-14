@@ -33,7 +33,7 @@ if (file_exists('../source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php')) {
 }
 
 // Set the parameters for our images
-$fontPath     = dirname(__FILE__) . '/arial.ttf';
+$fontPath     = dirname(__FILE__) . '/NotoSans-Regular.ttf';
 $fontSize     = 10;
 $fontAngle    = 0;
 $text         = file_get_contents(dirname(__FILE__) . '/a-tale-of-two-cities.txt');
