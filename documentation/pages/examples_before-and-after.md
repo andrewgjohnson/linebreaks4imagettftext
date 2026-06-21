@@ -1,6 +1,6 @@
 ---
-layout:    layout
-title:     linebreaks4imagettftext&#58; Examples&#58; Before and After
+layout:    default
+title:     Before and After • Examples • linebreaks4imagettftext
 permalink: /examples/before-and-after/
 ---
 

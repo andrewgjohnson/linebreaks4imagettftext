@@ -5,9 +5,9 @@
 [![Contributors](https://img.shields.io/github/contributors/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github)](https://github.com/andrewgjohnson/linebreaks4imagettftext/graphs/contributors)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=packagist)](https://packagist.org/packages/andrewgjohnson/linebreaks4imagettftext/stats)
 [![Issues](https://img.shields.io/github/issues/andrewgjohnson/linebreaks4imagettftext.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github)](https://github.com/andrewgjohnson/linebreaks4imagettftext/issues)
-[![Patreon](https://linebreaks4imagettftext.agjgd.org/documentation/linebreaks4imagettftext.agjgd.org/images/patreon-badge.png)](https://patreon.com/agjopensource)
+[![Patreon](documentation/images/patreon-badge.png)](https://patreon.com/agjopensource)
 
-<p align="center"><a href="https://linebreaks4imagettftext.agjgd.org/" title=""><img src="https://linebreaks4imagettftext.agjgd.org/documentation/linebreaks4imagettftext.agjgd.org/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
+<p align="center"><a href="https://linebreaks4imagettftext.agjgd.org/" title=""><img src="documentation/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
 
 ## Description
 
@@ -74,7 +74,7 @@ This project was started by [Andrew G. Johnson (@andrewgjohnson)](https://github
 Full list of contributors:
  * [Andrew G. Johnson (@andrewgjohnson)](https://github.com/andrewgjohnson)
 
-Our [security policies and procedures](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/.github/SECURITY.md) project. Our [issue templates](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/.github/ISSUE_TEMPLATE) comes via the [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [mountains photo](https://unsplash.com/photos/qJvpykJ5SKs) comes via [Gabriel Garcia Marengo](https://unsplash.com/@gabrielgm).
+Our [security policies and procedures](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/.github/SECURITY.md) project. Our [issue templates](https://github.com/andrewgjohnson/linebreaks4imagettftext/tree/master/.github/ISSUE_TEMPLATE) comes via the [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/andrewgjohnson/linebreaks4imagettftext/blob/master/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [Jekyll theme](https://github.com/andrewgjohnson/open-source-documentation-jekyll-theme) was released by [Andrew G. Johnson](https://github.com/andrewgjohnson).
 
 ## Changelog
 

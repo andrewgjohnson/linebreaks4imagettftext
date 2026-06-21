@@ -1,33 +1,60 @@
-title:        linebreaks4imagettftext
-name:         linebreaks4imagettftext
-description:  linebreaks4imagettftext is a function to automatically insert line breaks into your text while using PHP’s imagettftext() function.
-author:       Andrew G. Johnson
-author_email: andrew@andrewgjohnson.com
-email:        andrew@andrewgjohnson.com
-url:          "https://linebreaks4imagettftext.agjgd.org"
-includes_dir: .
-layouts_dir:  documentation/linebreaks4imagettftext.agjgd.org/layouts
-exclude:      [
-               .github,
-               .github/*.md,
-               .github/*.yml,
-               .github/CODEOWNERS,
-               .github/ISSUE_TEMPLATE,
-               .github/ISSUE_TEMPLATE/*.yml,
-               CHANGELOG.md,
-               CNAME,
-               composer.json,
-               composer.lock,
-               documentation/README.md,
-               examples/*.php,
-               examples/*.ttf,
-               examples/*.txt,
-               LICENSE,
-               README.md,
-               source,
-               vendor,
-               vendor/*.md,
-               phpcs.xml.dist,
-               tests,
-               phpunit.xml.dist
-              ]
+plugins:
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+
+remote_theme:         andrewgjohnson/open-source-documentation-jekyll-theme
+title:                linebreaks4imagettftext
+name:                 linebreaks4imagettftext
+description:          linebreaks4imagettftext is a function to automatically insert line breaks into your text while using PHP’s imagettftext() function.
+author:               Andrew G. Johnson
+author_email:         andrew@andrewgjohnson.com
+email:                andrew@andrewgjohnson.com
+url:                  https://linebreaks4imagettftext.agjgd.org
+includes_dir:         .
+favicon:              https://github.githubassets.com/favicon.ico
+footer_text:          agjgd.org
+footer_url:           https://agjgd.org
+copyright_year_start: 2018
+syntax_highlighting:  true
+cover_image:          mountains
+custom_head:          <script>if (location.pathname == "/documentation" || location.pathname.indexOf("/documentation/") === 0) window.location.href = "/";</script>
+social_links:
+  - platform:         twitter
+    url:              https://twitter.com/agjgdphp
+    label:            linebreaks4imagettftext on Twitter
+  - platform:         github
+    url:              https://github.com/andrewgjohnson/linebreaks4imagettftext
+    label:            linebreaks4imagettftext on GitHub
+  - platform:         packagist
+    url:              https://packagist.org/packages/andrewgjohnson/linebreaks4imagettftext
+    label:            linebreaks4imagettftext on Packagist
+  - platform:         patreon
+    url:              https://www.patreon.com/agjopensource
+    label:            linebreaks4imagettftext on Patreon
+  - platform:         x
+    url:              https://x.com/agjgdphp
+    label:            linebreaks4imagettftext on 𝕏
+exclude:              [
+                       .github,
+                       .github/*.md,
+                       .github/*.yml,
+                       .github/CODEOWNERS,
+                       .github/ISSUE_TEMPLATE,
+                       .github/ISSUE_TEMPLATE/*.yml,
+                       CHANGELOG.md,
+                       CNAME,
+                       composer.json,
+                       composer.lock,
+                       documentation/README.md,
+                       examples/*.php,
+                       examples/*.ttf,
+                       examples/*.txt,
+                       LICENSE,
+                       README.md,
+                       source,
+                       vendor,
+                       vendor/*.md,
+                       phpcs.xml.dist,
+                       tests,
+                       phpunit.xml.dist
+                      ]

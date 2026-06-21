@@ -1,8 +1,9 @@
 ---
-layout:    layout
-title:     linebreaks4imagettftext&#58; License
+layout:    default
+title:     License • linebreaks4imagettftext
 permalink: /license/
-nav:       5
+nav_order: 5
+nav_text:  License
 ---
 
 # License

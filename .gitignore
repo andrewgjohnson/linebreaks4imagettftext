@@ -19,3 +19,6 @@ vendor
 .phpunit.result.cache
 .claude
 .claude/*
+_config.local.yml
+_layouts
+assets
