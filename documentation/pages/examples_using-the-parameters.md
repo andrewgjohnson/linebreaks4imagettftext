@@ -1,6 +1,6 @@
 ---
-layout:    layout
-title:     linebreaks4imagettftext&#58; Examples&#58; Using the Parameters
+layout:    default
+title:     Using the Parameters • Examples • linebreaks4imagettftext
 permalink: /examples/using-the-parameters/
 ---
 
