@@ -15,7 +15,7 @@
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * PHP version 5
+ * PHP version 8
  *
  * @category  Andrewgjohnson
  * @package   Linebreaks4imagettftext
@@ -25,11 +25,11 @@
  * @link      https://github.com/andrewgjohnson/linebreaks4imagettftext
  */
 
-// Include the linebreaks4imagettftext source if you’re not using Composer
-if (file_exists('../source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php')) {
-    require_once '../source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php';
+// Load linebreaks4imagettftext (and the AgjGd class it wraps) via Composer’s autoloader
+if (file_exists('../vendor/autoload.php')) {
+    require_once '../vendor/autoload.php';
 } elseif (!function_exists('AndrewGJohnson\\AgjGd\\linebreaks4imagettftext')) {
-    die('linebreaks4imagettftext not found');
+    die('linebreaks4imagettftext not found; run composer install');
 }
 
 // Set the parameters for our images
