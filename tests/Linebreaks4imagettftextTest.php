@@ -14,13 +14,13 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace AndrewGJohnson\AgjGd\Tests;
+namespace AndrewGJohnson\Linebreaks4imagettftext\Tests;
 
 use PHPUnit\Framework\TestCase;
 
 class Linebreaks4imagettftextTest extends TestCase
 {
-    private const FONT_PATH  = __DIR__ . '/../../NotoSans-Regular.ttf';
+    private const FONT_PATH  = __DIR__ . '/NotoSans-Regular.ttf';
     private const FONT_SIZE  = 10;
     private const FONT_ANGLE = 0;
 

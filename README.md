@@ -13,6 +13,10 @@
 
 **linebreaks4imagettftext** is a function to automatically insert line breaks into your text while using PHP’s imagettftext() function.
 
+As of **v2.0.0** linebreaks4imagettftext is part of [**AgjGd**](https://agjgd.org). The implementation now lives in the `\AndrewGJohnson\AgjGd` class provided by the [`andrewgjohnson/agjgd`](https://packagist.org/packages/andrewgjohnson/agjgd) package, and this package provides the namespaced `\AndrewGJohnson\AgjGd\linebreaks4imagettftext()` function as a thin reverse-compatibility wrapper around it.
+
+New code should call [`\AndrewGJohnson\AgjGd::linebreaks4imagettftext()`](https://agjgd.org/methods/linebreaks4imagettftext/) directly.
+
 [![Patreon - Become a Patron](https://raster.shields.io/badge/Patreon%20-become%20a%20Patron-FD334A.png?style=for-the-badge&logo=patreon&logoColor=FD334A)](https://patreon.com/agjopensource)
 
 **linebreaks4imagettftext** is an [agjgd](https://agjgd.org) project.
@@ -45,13 +49,16 @@ Either run this command:
 
 or add this to the `require` section of your composer.json file:
 
-    "andrewgjohnson/linebreaks4imagettftext": "1.*"
+    "andrewgjohnson/linebreaks4imagettftext": "^2.0"
+
+This package requires PHP 8.0 or newer, the [GD extension](https://www.php.net/manual/book.image.php) and the [`andrewgjohnson/agjgd`](https://packagist.org/packages/andrewgjohnson/agjgd) package, which Composer installs automatically.
 
 ### Without Composer
 
-To use without Composer add an [include](http://php.net/manual/function.include.php) to the [`linebreaks4imagettftext.php` source file](https://raw.githubusercontent.com/andrewgjohnson/linebreaks4imagettftext/master/source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php).
+Because `\AndrewGJohnson\AgjGd\linebreaks4imagettftext()` now forwards to the `\AndrewGJohnson\AgjGd` class, you need both this wrapper and AgjGd. Composer is the recommended way to install them, but you can also require both source files directly:
 
-    include_once 'source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php';
+    require_once 'path/to/agjgd/source/AndrewGJohnson/AgjGd.php';
+    require_once 'source/AndrewGJohnson/AgjGd/linebreaks4imagettftext.php';
 
 ## Help Requests
 
